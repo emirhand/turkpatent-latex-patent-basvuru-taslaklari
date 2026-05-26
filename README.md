@@ -1,33 +1,40 @@
-# Türkpatent LaTeX Template (Basic)
+# Türkpatent LaTeX Şablonu (Temel Sürüm)
 
-This repository provides a ready-to-use LaTeX template for drafting patent applications that strictly comply with **Türkpatent** (Turkish Patent and Trademark Office) formatting guidelines. It is designed with an academic directory structure to keep your workflow clean and organized.
+Bu depo, Türkpatent (Türk Patent ve Marka Kurumu) format kurallarına tam uyumlu patent veya faydalı model başvuruları hazırlamak için kullanıma hazır bir LaTeX şablonu sunmaktadır. Akademik bir dizin yapısı kullanılarak tasarlanmış olup, buluş sahiplerinin şekilsel gereksinimlerle uğraşmadan yalnızca içeriğe odaklanmasını sağlar.
 
-## Features
+## Özellikler
 
-This template automatically handles the formatting requirements mandated by Türkpatent, so inventors can focus on writing their application:
-- **Page Margins**: Enforces Top 2-4 cm, Left 2.5-4 cm, Right 2-3 cm, and Bottom 2 cm for text pages [1]. Drawing pages (*Resimler*) automatically switch to Top/Left 2.5 cm, Right 1.5 cm, and Bottom 1 cm [1].
-- **Line Spacing**: Enforces 1.5 line spacing across the text sections [2].
-- **Line Numbering**: Automatically applies line numbers in increments of 5 for the *Tarifname* (Description) and *İstemler* (Claims) sections, while disabling them for drawings [1, 3].
-- **Page Numbering**: Maintains continuous page numbering for text sections and automatically switches to a distinct `current/total` format (e.g., 1/3, 2/3) for the *Resimler* section [3, 4].
-- **Section Breaks**: Ensures every main section starts on a new page automatically [2].
+Bu şablon, Türkpatent tarafından zorunlu tutulan aşağıdaki kısıtlamaları otomatik olarak uygular:
+- **Kenar Boşlukları**: Metin sayfalarında Üst/Sol 2.5-4 cm, Sağ 2-3 cm, Alt 2 cm olacak şekilde optimize edilmiştir [1, 2]. Çizimlerin yer aldığı resim sayfalarında ise kenar boşlukları otomatik olarak Üst/Sol 2.5 cm, Sağ 1.5 cm ve Alt 1 cm olarak değiştirilir [1, 2].
+- **Satır Aralığı ve Numaralandırması**: Metin kısımlarında 1.5 satır aralığı kullanılır [3]. *Tarifname* ve *İstemler* bölümlerinde sol kenarda her 5 satırda bir satır numarası eklenir [1]. Resim sayfalarında satır numaralandırması otomatik olarak kapatılır [1].
+- **Sayfa Numaralandırması**: Metin sayfalarının alt-orta kısmında sürekli sayfa numaralandırması yapılır [4]. *Resimler* bölümünde ise Türkpatent kuralları gereği "Mevcut Sayfa / Toplam Resim Sayfası" (örn. 1/3, 2/3) formatına otomatik geçiş yapılır [5].
+- **Bölüm Geçişleri**: *Tarifname*, *İstemler*, *Özet* ve *Resimler* bölümlerinin her biri zorunlu olduğu üzere otomatik olarak yeni bir sayfadan başlar [3].
 
-## Directory Structure
+## Dizin Yapısı
 
-The project is organized to separate the LaTeX configuration from your actual patent prose:
+Proje dosyaları, LaTeX ayarları ile patent metnini birbirinden ayırmak için şu şekilde yapılandırılmıştır:
 
-├── main.tex                 # The root file to compile.
-├── preamble.tex             # Contains packages, margin setups, and formatting rules.
-└── bolumler/                # Subdirectory for your application prose.
-    ├── 01-tarifname.tex     # TARİFNAME (Description) 
-    ├── 02-istemler.tex      # İSTEMLER (Claims)
-    ├── 03-ozet.tex          # ÖZET (Abstract)
-    └── 04-resimler.tex      # RESİMLER (Drawings)
+```text
+turkpatent-latex-template/
+│
+├── main.tex                 # Derlenecek ana kök dosya.
+├── preamble.tex             # Paketler, kenar boşlukları ve format ayarları.
+│
+├── bolumler/                # Başvuru metninin yer aldığı alt dizin.
+│   ├── 01-tarifname.tex     # TARİFNAME
+│   ├── 02-istemler.tex      # İSTEMLER
+│   ├── 03-ozet.tex          # ÖZET
+│   └── 04-resimler.tex      # RESİMLER (Şekillerin eklendiği dosya)
+│
+└── sekiller/                # Teknik çizimlerinizi koyacağınız dizin.
 
+Nasıl Kullanılır?
 
-## How to Use
+    Bu depoyu bilgisayarınıza klonlayın.
+    Derleme hatası almamak için sekiller/ klasörünün içine sekil1.png adında örnek bir resim (placeholder) ekleyin.
+    Kendi buluş detaylarınızı bolumler/ dizinindeki ilgili .tex dosyalarına yazın. 01-tarifname.tex dosyası, zorunlu alt başlıklarla (Teknik Alan, Önceki Teknik vb.) önceden doldurulmuştur.
+    Teknik çizimlerinizi (.png, .jpg, .pdf) sekiller/ dizinine yükleyin ve 04-resimler.tex dosyası içerisinden çağırın.
+        Not: Türkpatent kuralları gereği çizimlerde antet veya çerçeve bulunmamalı; renk ve gölgelendirme yerine tarama çizgileri kullanılmalıdır.
+    İşletim sisteminizdeki terminalden pdflatex main.tex komutunu çalıştırarak veya favori LaTeX editörünüzü (TeXstudio, VS Code vb.) kullanarak belgeyi derleyin.
 
-1. Clone this repository to your local machine.
-2. Open `main.tex` in your preferred LaTeX editor (e.g., TeXstudio, Overleaf, or VS Code).
-3. Fill in your patent details inside the respective `.tex` files located in the `chapters/` directory. Pre-filled standard headings (like *Teknik Alan*, *Önceki Teknik*) are provided in `01-tarifname.tex`.
-4. Compile `main.tex` using pdfLaTeX or Latexmk.
-
+Not: Türkçe babel paketinden kaynaklanan özel karakter (=) hatası preamble.tex içerisinde kalıcı olarak çözülmüştür.
