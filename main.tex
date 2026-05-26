@@ -1,0 +1,22 @@
+% main.tex
+
+\documentclass[12pt, a4paper]{article}
+
+% Preamble dosyasını çağır
+\input{preamble}
+
+\begin{document}
+
+% Metin kısımları için satır numaralarını aktif et
+\linenumbers
+
+% Bölümleri sırasıyla dahil et (Her \include komutu yeni bir sayfadan başlar)
+\include{bolumler/01-tarifname}
+\include{bolumler/02-istemler}
+\include{bolumler/03-ozet}
+
+% Resimler bölümünde satır numarası olmamalıdır
+\nolinenumbers
+\include{bolumler/04-resimler}
+
+\end{document}

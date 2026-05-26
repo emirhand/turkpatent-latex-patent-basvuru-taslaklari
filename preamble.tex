@@ -1,0 +1,33 @@
+% preamble.tex
+
+% Türkçe karakter desteği ve dil ayarları
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[turkish]{babel}
+% babel Türkçe'de eşittir işaretinin shorthand olmasını sevmiyor gibi
+\AtBeginDocument{\shorthandoff{=}}
+
+% Satır aralığı: 1.5 (Türkpatent zorunluluğu)
+\usepackage{setspace}
+\onehalfspacing
+
+% Metin sayfaları için sayfa kenar boşlukları (Üst 2-4 cm, Sol 2.5-4 cm, Sağ 2-3 cm, Alt 2 cm)
+\usepackage[top=3cm, left=3cm, right=2.5cm, bottom=2cm]{geometry}
+
+% Satır numaralandırması (Her 5 satırda bir)
+\usepackage[left]{lineno}
+\modulolinenumbers[4]
+
+% Sayfa numaralandırması (Alt orta kısımda)
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % Üst ve alt bilgileri temizle
+\renewcommand{\headrulewidth}{0pt} % Üst çizgi kalınlığını sıfırla
+\cfoot{\thepage} % Sayfa numarasını alta ortala 
+
+% Resim ekleme desteği ve resimlerin aranacağı klasör
+\usepackage{graphicx}
+\graphicspath{{sekiller/}}
+
+% Resim sayfaları (04-resimler.tex) için özel kenar boşluğu ve sayfa numaralandırması
+% ayarlarını ana belgede veya ilgili dosyanın içinde yöneteceğiz.
