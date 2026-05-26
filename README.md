@@ -16,7 +16,7 @@ Proje dosyaları, LaTeX ayarları ile patent metnini birbirinden ayırmak için 
 ```text
 turkpatent-latex-template/
 │
-├── main.tex                 # Derlenecek ana kök dosya.
+├── main.tex                 # Derlenecek kök dosya.
 ├── preamble.tex             # Paketler, kenar boşlukları ve format ayarları.
 │
 ├── bolumler/                # Başvuru metninin yer aldığı alt dizin.
@@ -27,6 +27,7 @@ turkpatent-latex-template/
 │
 └── sekiller/                # Teknik çizimlerinizi koyacağınız dizin.
 ```
+
 Nasıl Kullanılır?
 
     Bu depoyu bilgisayarınıza klonlayın.
@@ -34,6 +35,6 @@ Nasıl Kullanılır?
     Kendi buluş detaylarınızı bolumler/ dizinindeki ilgili .tex dosyalarına yazın. 01-tarifname.tex dosyası, zorunlu alt başlıklarla (Teknik Alan, Önceki Teknik vb.) önceden doldurulmuştur.
     Teknik çizimlerinizi (.png, .jpg, .pdf) sekiller/ dizinine yükleyin ve 04-resimler.tex dosyası içerisinden çağırın.
         Not: Türkpatent kuralları gereği çizimlerde antet veya çerçeve bulunmamalı; renk ve gölgelendirme yerine tarama çizgileri kullanılmalıdır.
-    İşletim sisteminizdeki terminalden pdflatex main.tex komutunu çalıştırarak veya favori LaTeX editörünüzü (TeXstudio, VS Code vb.) kullanarak belgeyi derleyin.
+    İşletim sisteminizdeki terminalden pdflatex main.tex komutunu çalıştırarak veya favori LaTeX editörünüzü (TeXstudio, VS Code vb.) kullanarak belgeyi derleyin. Dokümanınız bir PDF dosyası olarak kök dizine eklenecektir. 
 
 Not: Türkçe babel paketinden kaynaklanan özel karakter (=) hatası preamble.tex içerisinde kalıcı olarak çözülmüştür.
