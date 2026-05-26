@@ -5,16 +5,15 @@ Bu depo, Türkpatent (Türk Patent ve Marka Kurumu) format kurallarına tam uyum
 ## Özellikler
 
 Bu şablon, Türkpatent tarafından zorunlu tutulan aşağıdaki kısıtlamaları otomatik olarak uygular:
-- **Kenar Boşlukları**: Metin sayfalarında Üst/Sol 2.5-4 cm, Sağ 2-3 cm, Alt 2 cm olacak şekilde optimize edilmiştir [1, 2]. Çizimlerin yer aldığı resim sayfalarında ise kenar boşlukları otomatik olarak Üst/Sol 2.5 cm, Sağ 1.5 cm ve Alt 1 cm olarak değiştirilir [1, 2].
-- **Satır Aralığı ve Numaralandırması**: Metin kısımlarında 1.5 satır aralığı kullanılır [3]. *Tarifname* ve *İstemler* bölümlerinde sol kenarda her 5 satırda bir satır numarası eklenir [1]. Resim sayfalarında satır numaralandırması otomatik olarak kapatılır [1].
-- **Sayfa Numaralandırması**: Metin sayfalarının alt-orta kısmında sürekli sayfa numaralandırması yapılır [4]. *Resimler* bölümünde ise Türkpatent kuralları gereği "Mevcut Sayfa / Toplam Resim Sayfası" (örn. 1/3, 2/3) formatına otomatik geçiş yapılır [5].
-- **Bölüm Geçişleri**: *Tarifname*, *İstemler*, *Özet* ve *Resimler* bölümlerinin her biri zorunlu olduğu üzere otomatik olarak yeni bir sayfadan başlar [3].
+- **Kenar Boşlukları**: Metin sayfalarında Üst/Sol 2.5-4 cm, Sağ 2-3 cm, Alt 2 cm olacak şekilde optimize edilmiştir. Çizimlerin yer aldığı resim sayfalarında ise kenar boşlukları otomatik olarak Üst/Sol 2.5 cm, Sağ 1.5 cm ve Alt 1 cm olarak değiştirilir. 
+- **Satır Aralığı ve Numaralandırması**: Metin kısımlarında 1.5 satır aralığı kullanılır [3]. *Tarifname* ve *İstemler* bölümlerinde sol kenarda her 5 satırda bir satır numarası eklenir [1]. Resim sayfalarında satır numaralandırması otomatik olarak kapatılır. 
+- **Sayfa Numaralandırması**: Metin sayfalarının alt-orta kısmında sürekli sayfa numaralandırması yapılır. *Resimler* bölümünde ise Türkpatent kuralları gereği "Mevcut Sayfa / Toplam Resim Sayfası" (örn. 1/3, 2/3) formatına otomatik geçiş yapılır.
+- **Bölüm Geçişleri**: *Tarifname*, *İstemler*, *Özet* ve *Resimler* bölümlerinin her biri zorunlu olduğu üzere otomatik olarak yeni bir sayfadan başlar.
 
 ## Dizin Yapısı
 
 Proje dosyaları, LaTeX ayarları ile patent metnini birbirinden ayırmak için şu şekilde yapılandırılmıştır:
 
-```text
 turkpatent-latex-template/
 │
 ├── main.tex                 # Derlenecek ana kök dosya.
