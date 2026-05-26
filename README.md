@@ -13,7 +13,7 @@ Bu şablon, Türkpatent tarafından zorunlu tutulan aşağıdaki kısıtlamalar�
 ## Dizin Yapısı
 
 Proje dosyaları, LaTeX ayarları ile patent metnini birbirinden ayırmak için şu şekilde yapılandırılmıştır:
-
+```text
 turkpatent-latex-template/
 │
 ├── main.tex                 # Derlenecek ana kök dosya.
@@ -26,7 +26,7 @@ turkpatent-latex-template/
 │   └── 04-resimler.tex      # RESİMLER (Şekillerin eklendiği dosya)
 │
 └── sekiller/                # Teknik çizimlerinizi koyacağınız dizin.
-
+```
 Nasıl Kullanılır?
 
     Bu depoyu bilgisayarınıza klonlayın.
